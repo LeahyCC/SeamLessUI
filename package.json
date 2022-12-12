@@ -1,23 +1,10 @@
 {
-  "name": "seamlessui",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LeahyCC/SeamLessUI.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LeahyCC/SeamLessUI/issues"
-  },
-  "homepage": "https://github.com/LeahyCC/SeamLessUI#readme",
-  "dependencies": {
-    "@vitejs/plugin-react": "^3.0.0",
-    "vite": "^4.0.0"
-  }
+	"dependencies": {
+		"react": "^18.2.0",
+		"typescript": "^4.9.4"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.26",
+		"prettier": "^2.8.1"
+	}
 }
