@@ -3,7 +3,7 @@ import React, { useMemo } from 'react'
 const getSizeClasses = (size: 'small' | 'medium' | 'large') => {
   switch (size) {
     case 'small': {
-      return 'px-4 py-2.5'
+      return 'px-4 py-2'
     }
     case 'large': {
       return 'px-6 py-3'
@@ -24,16 +24,20 @@ const BASE_BUTTON_CLASSES =
 
 type ButtonProps = {
   primary?: boolean
+  label?: string
+  icon?: React.ReactNode
+  iconPosition?: 'left' | 'right'
   size?: 'small' | 'medium' | 'large'
-  label: string
   onClick?: () => void
 }
 /**
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
+  primary = true,
   size = 'medium',
+  icon,
+  iconPosition = 'left',
   label,
   ...props
 }: ButtonProps) => {
@@ -50,7 +54,19 @@ export const Button = ({
       className={`${BASE_BUTTON_CLASSES} ${computedClasses}`}
       {...props}
     >
-      {label}
+      {!!icon ? (
+        <span className="flex items-center justify-center">
+          {iconPosition === 'left' && icon}
+          <span className={iconPosition === 'left' ? 'ml-2' : 'mr-2'}>
+            {label}
+          </span>
+          {iconPosition === 'right' && icon}
+        </span>
+      ) : label ? (
+        label
+      ) : (
+        icon
+      )}
     </button>
   )
 }

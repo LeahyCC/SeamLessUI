@@ -10,7 +10,6 @@ const meta = {
 
 export default meta
 
-// More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
 export const Primary = {
   args: {
     primary: true,
@@ -35,5 +34,26 @@ export const Small = {
   args: {
     size: 'small',
     label: 'Button',
+  },
+}
+
+export const OnlyIcon = {
+  args: {
+    icon: '👍',
+  },
+}
+
+export const IconWithLabel = {
+  args: {
+    icon: '👍',
+    label: 'Button',
+  },
+}
+
+export const IconWithLabelRight = {
+  args: {
+    icon: '👍',
+    label: 'Button',
+    iconPosition: 'right',
   },
 }
