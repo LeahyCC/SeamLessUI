@@ -12,7 +12,6 @@ export default meta
 
 export const Primary = {
   args: {
-    primary: true,
     label: 'Button',
   },
 }
@@ -20,6 +19,7 @@ export const Primary = {
 export const Secondary = {
   args: {
     label: 'Button',
+    primary: false,
   },
 }
 
