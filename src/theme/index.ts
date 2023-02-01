@@ -1,6 +1,6 @@
 import { ThemeDefinition } from './definitions'
 
-export const cypherTheme: ThemeDefinition = {
+export const seamlessTheme: ThemeDefinition = {
   border: {
     radiusLarge: '0.5rem',
     radiusDefault: '0.25rem',
